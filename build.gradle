@@ -1,0 +1,29 @@
+plugins{
+    // Especifica plugins que contem um conjunto de tarefas
+    //comuns a uma linguagem de programacao ou conjunto de pacotes
+
+    id 'war'
+    // Permite gerar os webs arcaicos, arquivos web
+    id 'org.gretty' version '3.0.3'
+    // Contem o servidor web, tarefas
+    // Tras algumas dependencias para o servidor web para podermos
+    //executar localmente a aplicacao
+}
+
+dependencies{
+    // Como sera usado 
+    // E o que sera buscado
+    providedCompile 'javax.servlet:javax.servlet-api:3.1.0'
+    // Usado durante a compilacao
+}
+
+repositories{
+    // Digo onde ele ira buscar as dependencias
+    jcenter()
+}
+
+gretty{
+    // Servidor - Servlet Container = Gretty
+    // Configuracao do gretty para usar TomCat
+    servletContainer = 'jetty9'
+}
