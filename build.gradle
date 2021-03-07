@@ -25,5 +25,5 @@ repositories{
 gretty{
     // Servidor - Servlet Container = Gretty
     // Configuracao do gretty para usar TomCat
-    servletContainer = 'jetty9'
+    servletContainer = 'jetty9.3'
 }
