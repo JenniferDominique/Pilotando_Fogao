@@ -17,16 +17,16 @@
                     <div class="container">
                         <div class="row col-lg-12 d-flex align-items-center justify-content-between">
                             
-                            <h1 class="logo">
+                            <h1 class="logo col-sm-3">
                                 <a href="/">
                                     <img 
                                         alt="Pilotando Fogão - O manual para todos os pilotos de fogões"
-                                        src="/imagens/Logo.png"
+                                        src="https://raw.githubusercontent.com/JenniferDominique/Pilotando_Fogao/master/src/main/webapp/imagens/Logo.png"
                                     >
                                 </a>
                             </h1>
 
-                            <div class="search-desk d-none d-lg-block">
+                            <div class="search-desk  col-sm-6 d-none d-lg-block">
                                 <form action="/busca" id="search" method="get">
                                     <input 
                                         arial-lable="Pesquisar receitas" 
@@ -40,7 +40,7 @@
                                 </form>
                             </div>
 
-                            <div class="buttons d-none d-lg-flex align-items-center justify-content-center">
+                            <div class="col-sm-3 buttons d-none d-lg-flex align-items-center justify-content-center">
                                 <div class="nova-receita">
                                     <a 
                                         arial-label="Crie uma nova receita"
@@ -143,6 +143,10 @@
                     <option value="kilo" title="quilogramas">Kg</option>
                     <option value="litro" title="litro">L</option>
                 </select><br/>
+
+                Modo de Preparo:
+                <input id="preparo" name="preparo" type="text">
+                <br/>
 
                 <input type="submit">
         </form>
