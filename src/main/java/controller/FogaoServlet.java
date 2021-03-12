@@ -6,10 +6,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- *
- * @author fabriciogmc
- */
+
 @WebServlet({"*.action","/"})
 public class FogaoServlet extends HttpServlet{
     

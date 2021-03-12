@@ -5,71 +5,68 @@
         <title> Cadastro de Alimentos e Receitas </title>
         <meta charset="utf-8">
     </head>
+     
 
-    <header>
-        <h1 class="site-title">Pilotando Fogão</h1>
-        <h2 class="site-subtitle">Manual do Piloto de Fogão</h2>
-        <nav class="menu"> 
-          <!-- tag nave barra de navegação link -->
-          <ul>
-            <li><a href="#">Cadastro</a></li>
-            <li><a href="#">Receitas</a></li>
-          </ul>
-        </nav>
+    <body style="background-color: #F2ECEB;">
+
+        <header 
+            class="header" 
+            style="background-color:#A6212C;top: 0px;">
+            <div class="header-fixed-top">
+                <div class="head">
+                    <div class="container">
+                        <div class="row col-lg-12 d-flex align-items-center justify-content-between">
+                            
+                            <h1 class="logo">
+                                <a href="/">
+                                    <img 
+                                        alt="Pilotando Fogão - O manual para todos os pilotos de fogões"
+                                        src="/imagens/Logo.png"
+                                    >
+                                </a>
+                            </h1>
+
+                            <div class="search-desk d-none d-lg-block">
+                                <form action="/busca" id="search" method="get">
+                                    <input 
+                                        arial-lable="Pesquisar receitas" 
+                                        class="txt" 
+                                        id="search-query" 
+                                        name="q"
+                                        placeholder="Encontre uma receita..."
+                                        type="text"
+                                    >
+                                    <input class="ico search" type="submit" value="Pesquisar">
+                                </form>
+                            </div>
+
+                            <div class="buttons d-none d-lg-flex align-items-center justify-content-center">
+                                <div class="nova-receita">
+                                    <a 
+                                        arial-label="Crie uma nova receita"
+                                        class="nova-receita"
+                                        data-open-on="center"
+                                        href="/receita/enviar-receita"
+                                    >
+                                        <img 
+                                            alt="Nova receita - ícone"
+                                            class="nova-receita-icone"
+                                            src="https://img.itdg.com.br/tdg/assets/layout/blank.gif"
+                                        >
+
+                                        <div class="txt">Nova Receita</div>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
         
-        
-        <style>
-            body {
-            /* a parte total da página web */
-            /* informar as propriedades para modificar as aparências */
-             background-image: url('https://i.pinimg.com/564x/28/a8/f0/28a8f00f46fb67e059a44c1c6b9b181c.jpg'); /* plano de fundo */
-             background-size: 20vh; /*muda o tamanho de acordo com as telas, masntém a proporção independente do computador*/
-            font-family: Arial;
-            height: 20vh;
-            }
 
-            .menu {
-            /* selecionando todo mundo da tag menu */
-            background-color: lightgrey;
-            }
 
-            .menu ul {
-            display: flex; /* Exibição, os liks ficam um do lado do outro */
-            justify-content: space-around; /*Espaço entre os links. Essa propriedade só funciona em conjunto com o display*/ 
-            }
-
-            .menu li {
-            /* Se lê da direita para esquerda para saber quem vai ser "atingido" */
-            /* Todas as li que estão dentro de uma classe chamada menu vão receber atributos */
-              
-            list-style: none; /* Tira os pontinhos característicos de listas */
-            }
-
-            a {
-            /* a - linkes */
-            color: teal;
-            text-decoration: none;
-            }
-
-            a:hover {
-            text-decoration: underline;
-            /* Quando passar o mouse por cima aparece o underline */
-            }
-
-            .site-subtitle,
-            .site-title {
-            color: indigo;
-            text-align: center;
-            }
-
-            .site-subtitle {
-            font-style: italic;
-            }
-        </style>
-      
-    </header>
-
-    <body>
         <form 
             method="get" 
             action="escrevernome.action"
