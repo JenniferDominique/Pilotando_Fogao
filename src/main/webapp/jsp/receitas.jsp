@@ -10,6 +10,10 @@
         <title>Receitas</title>
 
         <style>
+            body{
+                background-color: #F2ECEB;
+            }
+            
             span {
                 color: red;
             }
@@ -81,7 +85,7 @@
                                 alt="Ver Mais/ Ver Menos"
                                 src="https://raw.githubusercontent.com/JenniferDominique/Pilotando_Fogao/master/src/main/webapp/imagens/cozinhar.png"
                                 width="40"
-                                height="0"
+                                height="40"
                             >
                         </td>
                         <td></td>

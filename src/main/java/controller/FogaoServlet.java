@@ -8,23 +8,29 @@ import javax.servlet.http.HttpServletResponse;
 
 
 @WebServlet({"*.action","/"})
+
 public class FogaoServlet extends HttpServlet{
     
     @Override
     public void doGet(HttpServletRequest req,
-                       HttpServletResponse res){
+                      HttpServletResponse res){
         
         String path = req.getServletPath();
         // Ver qual caminho foi digitado
+        
         ServletContext sc = req.getServletContext();
+        
         System.out.println(path); 
+        
         switch (path){
+            
             case "/":
                try{
                     sc.getRequestDispatcher("/jsp/cadastroAlimentosReceitas.jsp").forward(req, res);
                 } catch (Exception e){}
                break;
-            case "/escrevernome.action":
+            
+               case "/escrevernome.action":
                 try{
                     req.setCharacterEncoding("UTF-8");
                     String nome = req.getParameter("alimento");
