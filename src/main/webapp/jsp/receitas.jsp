@@ -4,6 +4,9 @@
 
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
+        <!--Fonte de letra Sofia da Google-->
+        
         <title>Receitas</title>
 
         <style>
@@ -15,15 +18,12 @@
                 display: none;
             }
 
-            tfoot {
-                //display: none;
-            }
-
             #hide {
                 align: right;
             }
 
-            th {
+            th{
+                font-family: Sofia, sans-serif;
                 text-align: left;
             }
         </style>
@@ -37,7 +37,7 @@
                     //$("tfoot").hide();
                 });
                 $("#show").click(function () {
-                    $("#receita>tbody>tr:nth-child(even)").show();
+                    $("#receita>tbody>tr:nth-child(even)").toggle();
                     // Show - Mostra a receita
                     //$("tfoot").show();
                 });
@@ -52,31 +52,56 @@
 
     <body>
 
-        <table id="receita" border="none" rules="none" frame="box" align="left"
-            style="width: 100%; background-color: #F2C4B3;">
+        <table 
+            id="receita" 
+            border="none" 
+            rules="none" 
+            frame="box" 
+            align="left"
+            style="
+                width: 100%; 
+                background-color: #F2C4B3; 
+                border-color: #F2C4B3;
+                font-family: 'Trebuchet MS', sans-serif; ">
             <thead>
                 <tr>
-                    <th colspan="3" style="background-color: brown;">
-                        <a id="titulo">Titulo Receita</a>
+                    <th colspan="5" style="text-align:left;">
+                        <a 
+                            id="titulo" 
+                            style="
+                                font-family: Sofia, sans-serif; 
+                                color: #8C0303;
+                                font-size: 25px;"
+                            class="font-effect-neon"
+                        >
+                            Titulo Receita
+                        </a>
+                        <td style="text-align:right;" rowspan="2">
+                            <img id="show"
+                                alt="Ver Mais/ Ver Menos"
+                                src="https://raw.githubusercontent.com/JenniferDominique/Pilotando_Fogao/master/src/main/webapp/imagens/cozinhar.png"
+                                width="40"
+                                height="0"
+                            >
+                        </td>
+                        <td></td>
+                        <td></td>
                     </th>
                 </tr>
             </thead>
 
-            <tbody>
-                <tr>
+            <tbody colspan="5">
+                <tr style="color: #787373">
                     <td>Tempo de Preparo: </td>
                     <td>Rendimento (Porções): </td>
-                    <td style="text-align:right;">
-                        <img alt="Ver Mais/ Ver Menos"
-                            src="">
-                        <button id="show">Ver Mais</button>
-                    </td>
+                    <td>Categoria: </td>
                 </tr>
 
                 <tr>
                     <td id="verMais">
                         <table>
-                            <tbody>
+                            <tbody colspan="5">
+                                <tr></tr>
                                 <tr>
                                     <th>Ingredientes:</th>
                                 </tr>
@@ -94,8 +119,7 @@
 
                                 <tr>
                                     <td>
-                                        <li>Amasse a banananananananananana</li>
-                                        <li>Pique a maçã</li>
+                                        Amasse a banana
                                     </td>
                                 </tr>
                             </tbody>
@@ -103,20 +127,12 @@
                     </td>
                 </tr>
             </tbody>
-
-            <tfoot style="background-color:yellow">
-                <tr>
-                    <th colspan="3" style="text-align:right;">
-                        <button id="hide">Ver Menos</button>
-                    </th>
-                </tr>
-            </tfoot>
         </table>
 
 
         Seu nome é:
         <span>
-            <%=request.getAttribute("nomeCompleto")%>
+            <%=request.getAttribute("nomeAlimento")%>
                 <span>
     </body>
 

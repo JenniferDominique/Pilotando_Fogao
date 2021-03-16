@@ -11,17 +11,19 @@
 
         <header 
             class="header" 
-            style="background-color:#A6212C;top: 0px;">
+            style="background-color:#A6212C;">
             <div class="header-fixed-top">
                 <div class="head">
                     <div class="container">
                         <div class="row col-lg-12 d-flex align-items-center justify-content-between">
                             
-                            <h1 class="logo col-sm-3">
+                            <h1 class="logo">
                                 <a href="/">
                                     <img 
                                         alt="Pilotando Fogão - O manual para todos os pilotos de fogões"
                                         src="https://raw.githubusercontent.com/JenniferDominique/Pilotando_Fogao/master/src/main/webapp/imagens/Logo.png"
+                                        width="200"
+                                        height="200"
                                     >
                                 </a>
                             </h1>
@@ -74,7 +76,7 @@
             >
                 <h1>Cadastro de Alimentos</h1>
                 Alimento: 
-                <input name="nome_completo"/><br/>
+                <input name="alimento"/><br/>
                 
                 Categoria: 
                 <select 
