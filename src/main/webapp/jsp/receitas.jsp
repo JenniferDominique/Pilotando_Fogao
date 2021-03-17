@@ -75,6 +75,7 @@
                         >
                             Titulo Receita
                         </a>
+                        
                         <td style="text-align:right;" rowspan="2">
                             <img id="show"
                                 alt="Ver Mais/ Ver Menos"

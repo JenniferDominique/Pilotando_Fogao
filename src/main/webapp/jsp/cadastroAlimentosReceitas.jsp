@@ -10,8 +10,7 @@
 
     <body style="background-color: #F2ECEB;">
 
-        <header class="header" style="background-color:#A6212C;">
-            <!--
+        <!--
             <div class="header-fixed-top">
                 <div class="head">
                     <div class="container">
@@ -51,31 +50,74 @@
             </div>
             -->
 
-            <table style="width: 12px;">
-                <tr>
-                    <td style="text-align:left">
+        <table 
+            class="header" 
+            border="none" 
+            rules="none" 
+            frame="box" 
+            align="left" 
+            style="
+                width: 100%; 
+                background-color:#A6212C; 
+                border-color: #A6212C;
+                font-family: 'Trebuchet MS', sans-serif; "
+        >
+            <thead>
+                <tr align="left">
+                    <td>
                         <img alt="Pilotando Fogão - O manual para todos os pilotos de fogões"
                             src="https://raw.githubusercontent.com/JenniferDominique/Pilotando_Fogao/master/src/main/webapp/imagens/Logo.png"
-                            width="180" height="180">
+                            width="30%">
                     </td>
-                    <td style="text-align:center">
+
+                    <td>
                         <form action="/busca" id="search" method="get">
-                            <input arial-lable="Pesquisar receitas" class="txt" id="search-query" name="q"
-                                placeholder="Encontre uma receita..." type="text">
-                            <input class="ico search" type="submit" value="Pesquisar">
+                            <input 
+                                arial-lable="Pesquisar receitas" 
+                                class="txt" id="search-query" 
+                                name="q"
+                                placeholder="Encontre uma receita..." 
+                                type="text"
+                            >
+
+                            <input 
+                                class="ico search" 
+                                type="submit" 
+                                value="Pesquisar"
+                            >
                         </form>
                     </td>
-                    <td style="text-align:right">
-                        <a arial-label="Crie uma nova receita" class="nova-receita" href="/receita/enviar-receita">
-                            <img alt="Nova receita - ícone" class="nova-receita-icone"
+
+                    <td>
+                        <a 
+                            arial-label="Crie uma nova receita" 
+                            class="nova-receita" 
+                            href="/receita/enviar-receita"
+                        >
+                            <img 
+                                alt="Nova receita - ícone" 
+                                class="nova-receita-icone"
                                 src="https://img.itdg.com.br/tdg/assets/layout/blank.gif">
 
                             <div class="txt">Nova Receita</div>
                         </a>
                     </td>
+
+                    <td>
+                        <a 
+                            arial-label="Livro de receitas" 
+                        >
+                            <img 
+                                alt="Livro de Receitas - ícone" 
+                                class="livro-receita-icone"
+                                src="https://img.itdg.com.br/tdg/assets/layout/blank.gif">
+
+                            <div class="txt">Livro de Receitas</div>
+                        </a>
+                    </td>
                 </tr>
-            </table>
-        </header>
+            </thead>
+        </table>
 
 
 
