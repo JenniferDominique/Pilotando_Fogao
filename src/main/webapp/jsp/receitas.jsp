@@ -13,7 +13,7 @@
             body{
                 background-color: #F2ECEB;
             }
-            
+
             span {
                 color: red;
             }
@@ -35,11 +35,6 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
             $(document).ready(function () {
-                $("#hide").click(function () {
-                    $("#receita>tbody>tr:nth-child(even)").hide();
-                    // Hide - Esconde a receita
-                    //$("tfoot").hide();
-                });
                 $("#show").click(function () {
                     $("#receita>tbody>tr:nth-child(even)").toggle();
                     // Show - Mostra a receita
