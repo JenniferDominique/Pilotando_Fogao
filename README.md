@@ -15,9 +15,7 @@ Desenvolver um sistema web utilizando da tecnologia Java que atenda aos seguinte
 * O diagrama de caso de uso seguinte dá uma ideia geral das funcionalidades esperadas para o
 sistema:
 
-<img src="https://raw.githubusercontent.com/JenniferDominique/Pilotando_Fogao/master/src/main/webapp/img/Diagrama%20de%20Caso%20de%20Uso%20-%20ReadMe.png" width="100px;" title="Diagrama de Caso de Uso - Funcionalidades do Sistema">
-
-![alt text](https://raw.githubusercontent.com/JenniferDominique/Pilotando_Fogao/master/src/main/webapp/img/Diagrama%20de%20Caso%20de%20Uso%20-%20ReadMe.png  "Diagrama de Caso de Uso - Funcionalidades do Sistema")
+<img src="https://raw.githubusercontent.com/JenniferDominique/Pilotando_Fogao/master/src/main/webapp/img/Diagrama%20de%20Caso%20de%20Uso%20-%20ReadMe.png" width="200px;" title="Diagrama de Caso de Uso - Funcionalidades do Sistema">
 
 Note que 'Gerenciar Ingredientes' refere-se a: inserir, alterar, buscar e remover ingredientes. O mesmo se aplica às receitas. Além disso, não deve ser possível criar uma receita com um ingrediente não cadastrado nem tampouco remover um ingrediente caso esse esteja presente
 em pelo menos uma receita.
