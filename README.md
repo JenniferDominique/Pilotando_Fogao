@@ -15,12 +15,10 @@ Desenvolver um sistema web utilizando da tecnologia Java que atenda aos seguinte
 * O diagrama de caso de uso seguinte dá uma ideia geral das funcionalidades esperadas para o
 sistema:
 
-<img src="https://raw.githubusercontent.com/JenniferDominique/Pilotando_Fogao/master/src/main/webapp/img/Diagrama%20de%20Caso%20de%20Uso%20-%20ReadMe.png" width="200px;" title="Diagrama de Caso de Uso - Funcionalidades do Sistema">
+<img src="https://raw.githubusercontent.com/JenniferDominique/Pilotando_Fogao/master/src/main/webapp/img/Diagrama%20de%20Caso%20de%20Uso%20-%20ReadMe.png" width="400px;" title="Diagrama de Caso de Uso - Funcionalidades do Sistema">
 
 Note que 'Gerenciar Ingredientes' refere-se a: inserir, alterar, buscar e remover ingredientes. O mesmo se aplica às receitas. Além disso, não deve ser possível criar uma receita com um ingrediente não cadastrado nem tampouco remover um ingrediente caso esse esteja presente
 em pelo menos uma receita.
-
-
 
 ### Requisitos e Restrições Comuns:
 
@@ -37,3 +35,16 @@ em pelo menos uma receita.
 5. Utilizar Java Server Pages para criar páginas dinâmicas (tipo templates);
 6. Utilizar o Gradle 5 ou superior para fazer o build do sistema;
 7. Implantar o sistema em um web container Apache TomCat.
+
+## Build do Sistema
+
+* Abra o terminal de comando (cmd) dentro do diretório do projeto;
+* Digite os seguintes para fazer o build do sistema utilizando a ferramenta Gradle:
+```
+gradle build
+```
+* Em seguida digite:
+```
+gradle appRun
+```
+Então a aplicação poderá ser vista através do browser, mas rodando localmente.
