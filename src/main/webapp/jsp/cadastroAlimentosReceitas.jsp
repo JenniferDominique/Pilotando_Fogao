@@ -3,52 +3,40 @@
     <html>
 
     <head>
-        <title> Cadastro de Alimentos e Receitas </title>
         <meta charset="utf-8">
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Kelly+Slab">
+        <!--Fonte de letra Kelly Slab-->
+        <title> Pilotando Fogão - Manual para pilotos de fogão</title>
     </head>
 
+    <style>
+        h1{
+            font-family: 'Kelly Slab'; 
+            background-color: #BF7665;
+            font-size: 20px; 
+        }
 
-    <body style="background-color: #F2ECEB;">
+        body{
+            font-family: 'Kelly Slab';
+            background-color: #F2ECEB; 
+        }
 
-        <!--
-            <div class="header-fixed-top">
-                <div class="head">
-                    <div class="container">
-                        <div class="row col-lg-12 d-flex align-items-center justify-content-between">
+        input, select{
+            background-color: #C4C4C4; 
+            border-color: #C4C4C4;
+        }
 
-                            <h1 class="logo">
-                                <a href="/">
-                                    <img alt="Pilotando Fogão - O manual para todos os pilotos de fogões"
-                                        src="https://raw.githubusercontent.com/JenniferDominique/Pilotando_Fogao/master/src/main/webapp/imagens/Logo.png"
-                                        width="200" height="200">
-                                </a>
-                            </h1>
+        a{
+            color: black;
+            text-decoration: none;
+        }
 
-                            <div class="search-desk  col-sm-6 d-none d-lg-block">
-                                <form action="/busca" id="search" method="get">
-                                    <input arial-lable="Pesquisar receitas" class="txt" id="search-query" name="q"
-                                        placeholder="Encontre uma receita..." type="text">
-                                    <input class="ico search" type="submit" value="Pesquisar">
-                                </form>
-                            </div>
+        a:hover{
+            text-decoration: underline;
+        }
+    </style>
 
-                            <div class="col-sm-3 buttons d-none d-lg-flex align-items-center justify-content-center">
-                                <div class="nova-receita">
-                                    <a arial-label="Crie uma nova receita" class="nova-receita"
-                                        href="/receita/enviar-receita">
-                                        <img alt="Nova receita - ícone" class="nova-receita-icone"
-                                            src="https://img.itdg.com.br/tdg/assets/layout/blank.gif">
-
-                                        <div class="txt">Nova Receita</div>
-                                    </a>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            -->
+    <body>
 
         <table 
             class="header" 
@@ -60,16 +48,17 @@
                 width: 100%; 
                 background-color:#A6212C; 
                 border-color: #A6212C;
-                font-family: 'Trebuchet MS', sans-serif; "
+                font-family: 'Kelly Slab';"
         >
             <thead>
                 <tr align="left">
                     <td>
                         <img alt="Pilotando Fogão - O manual para todos os pilotos de fogões"
-                            src="https://raw.githubusercontent.com/JenniferDominique/Pilotando_Fogao/master/src/main/webapp/imagens/Logo.png"
+                            src="https://raw.githubusercontent.com/JenniferDominique/Pilotando_Fogao/master/src/main/webapp/img/Logo.png"
                             width="30%">
                     </td>
 
+                    <!--
                     <td>
                         <form action="/busca" id="search" method="get">
                             <input 
@@ -78,6 +67,7 @@
                                 name="q"
                                 placeholder="Encontre uma receita..." 
                                 type="text"
+                                style="background-color: #F2ECEB; border-color: #F2ECEB;"
                             >
 
                             <input 
@@ -87,30 +77,37 @@
                             >
                         </form>
                     </td>
+                    -->
 
-                    <td>
+                    <td style="text-align: center;">
                         <a 
                             arial-label="Crie uma nova receita" 
                             class="nova-receita" 
-                            href="/receita/enviar-receita"
+                            href="/cadastro"
                         >
                             <img 
                                 alt="Nova receita - ícone" 
                                 class="nova-receita-icone"
-                                src="https://img.itdg.com.br/tdg/assets/layout/blank.gif">
+                                src="https://raw.githubusercontent.com/JenniferDominique/Pilotando_Fogao/master/src/main/webapp/img/NovaReceita.png"
+                                style="width: 35px;"
+                            >
 
                             <div class="txt">Nova Receita</div>
                         </a>
                     </td>
 
-                    <td>
+                    <td style="text-align: center;">
                         <a 
-                            arial-label="Livro de receitas" 
+                            arial-label="Livro de receitas"
+                            class="nova-receita" 
+                            href="/receitas.jsp" 
                         >
                             <img 
                                 alt="Livro de Receitas - ícone" 
                                 class="livro-receita-icone"
-                                src="https://img.itdg.com.br/tdg/assets/layout/blank.gif">
+                                src="https://raw.githubusercontent.com/JenniferDominique/Pilotando_Fogao/master/src/main/webapp/img/LivroReceitas.png"
+                                style="width: 35px;"
+                            >
 
                             <div class="txt">Livro de Receitas</div>
                         </a>
@@ -119,12 +116,17 @@
             </thead>
         </table>
 
+        <br/>
 
-
-        <form method="get" action="escrevernome.action" id="alimentos">
+        <form
+            id="alimentos"
+            method="get" 
+            action="escrevernome.action"
+        >
+            <tr></tr><br/>
             <h1>Cadastro de Alimentos</h1>
             Alimento:
-            <input name="alimento" /><br />
+            <input name="alimento"/><br />
 
             Categoria:
             <select name="categoria_alimento" id="categoria_alimento" form="carform">
@@ -139,7 +141,6 @@
             <input type="submit">
         </form>
 
-        <hr />
 
         <form method="get" action="escrevernome.action" id="receitas">
             <h1>Cadastro de Receita</h1>
@@ -148,7 +149,7 @@
             <input name="titulo_receita" /><br />
 
             Tempo de preparo (min.):
-            <input name="tempo" /><br />
+            <input name="tempo" type="time"/><br />
 
             Porções:
             <input type="number" id="quantidade" name="quantidade" min="1" max="50"><br />
@@ -170,6 +171,7 @@
 
             Medida:
             <select name="medida" id="medida" form="receitas">
+                <option value="unidade" title="unidade">Unidade</option>
                 <option value="grama" title="gramas">g</option>
                 <option value="ml" title="mililitros">ml</option>
                 <option value="kilo" title="quilogramas">Kg</option>

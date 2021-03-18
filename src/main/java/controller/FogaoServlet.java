@@ -26,6 +26,12 @@ public class FogaoServlet extends HttpServlet{
             
             case "/":
                try{
+                    sc.getRequestDispatcher("/jsp/receitas.jsp");
+                } catch (Exception e){}
+               break;
+
+            case "/cadastro":
+               try{
                     sc.getRequestDispatcher("/jsp/cadastroAlimentosReceitas.jsp").forward(req, res);
                 } catch (Exception e){}
                break;
@@ -41,6 +47,7 @@ public class FogaoServlet extends HttpServlet{
                     sc.getRequestDispatcher("/jsp/receitas.jsp").forward(req, res);
                 }catch (Exception e){}
             break;
+            
             default:
                 try{
                    sc.getRequestDispatcher("/jsp/paginaNaoEncontrada.jsp").forward(req, res);
