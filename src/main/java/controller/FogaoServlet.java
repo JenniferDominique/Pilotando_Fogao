@@ -26,7 +26,7 @@ public class FogaoServlet extends HttpServlet{
             
             case "/":
                try{
-                    sc.getRequestDispatcher("/jsp/receitas.jsp");
+                    sc.getRequestDispatcher("/jsp/receitas.jsp").forward(req, res);
                 } catch (Exception e){}
                break;
 
