@@ -41,7 +41,6 @@
 
         <div style="margin-bottom: 120px;">
             <div style="color: #F2ECEB; font-size: 1px; background-color: #A6212C;">-</div>
-            <!-- Gambi para poder ter a margem entre o cabecalho e o tópico de cadastro-->
 
             <table class="header" border="none" rules="none" frame="box" align="left" style="
                 width: 100%; 
@@ -151,14 +150,15 @@
 
             Medida:
             <select name="medida" id="medida" form="receitas">
-                <option value="unidade" title="unidade">Unidade</option>
-                <option value="colher" title="colher">Colher</option>
-                <option value="xicara" title="xícara">Xícara</option>
-                <option value="copo" title="copo">Copo</option>
+                <option value="unidade" title="unidade">Unidade(s)</option>
+                <option value="colher" title="colher">Colher(es)</option>
+                <option value="xicara" title="xícara">Xícara(s)</option>
+                <option value="copo" title="copo">Copo(s)</option>
                 <option value="grama" title="gramas">g</option>
                 <option value="ml" title="mililitros">ml</option>
                 <option value="kilo" title="quilogramas">Kg</option>
                 <option value="litro" title="litro">L</option>
+                <option value="aGosto" title="aGosto">A gosto</option>
             </select><br />
 
             <input 
