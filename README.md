@@ -53,4 +53,4 @@ Então será fornecido um endereço localhost, copiando e colando esse endereço
 
 ## Etapas De Desenvolvimento (Vídeo)
 
-* Etapa 1: [Build do Sistema](https://web.microsoftstream.com/video/2bda556f-6fd0-4afd-93c1-c27a3534b77e)
+* Etapa 1: [Build do Sistema](https://youtu.be/LbPPuR-2KzU)
