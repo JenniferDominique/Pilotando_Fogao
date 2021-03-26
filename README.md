@@ -39,12 +39,18 @@ em pelo menos uma receita.
 ## Build do Sistema
 
 * Abra o terminal de comando (cmd) dentro do diretório do projeto;
-* Digite os seguintes para fazer o build do sistema utilizando a ferramenta Gradle:
+  * Obs:Já tem que ter o Java e Gradle devidamente instalados.
+
+* Digite os seguintes para baixar as dependências e fazer o build do sistema utilizando a ferramenta Gradle:
 ```
 gradle build
 ```
-* Em seguida digite:
+* Em seguida digite para executar a aplicação:
 ```
 gradle appRun
 ```
-Então a aplicação poderá ser vista através do browser, mas rodando localmente.
+Então será fornecido um endereço localhost, copiando e colando esse endereço no browser a aplicação poderá ser vista através do browser, mas rodando localmente.
+
+## Etapas De Desenvolvimento (Vídeo)
+
+* Etapa 1: [Build do Sistema](https://web.microsoftstream.com/video/2bda556f-6fd0-4afd-93c1-c27a3534b77e)
