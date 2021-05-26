@@ -85,27 +85,6 @@
                         </a>
                     </td>
 
-                    <!--
-                    <td>
-                        <form action="/busca" id="search" method="get">
-                            <input 
-                                arial-lable="Pesquisar receitas" 
-                                class="txt" id="search-query" 
-                                name="q"
-                                placeholder="Encontre uma receita..." 
-                                type="text"
-                                style="background-color: #F2ECEB; border-color: #F2ECEB;"
-                            >
-
-                            <input 
-                                class="ico search" 
-                                type="submit" 
-                                value="Pesquisar"
-                            >
-                        </form>
-                    </td>
-                    -->
-
                     <td style="text-align: center;">
                         <a arial-label="Crie uma nova receita" href="./cadastro">
                             <img alt="Nova receita - ícone" class="nova-receita-icone"
@@ -141,7 +120,7 @@
                 <tr>
                     <th colspan="5" style="text-align:left;">
                         <a id="titulo" style="font-size: 22px;">
-                            SMOOTHIE DE MARACUJÁ
+                            Smoothie de Maracujá
                         </a>
 
                     <td style="text-align:right;" rowspan="2">
@@ -198,28 +177,55 @@
         </table> 
                  
 
-
         <%
             List<Receitas> receitas = (List<Receitas>) request.getAttribute("receitas");
             for(Receitas receita: receitas){
                 out.print(
-                    "<table><thead><tr><th>"+ 
-                        receita.getNome() + 
-                    "</th></tr></thead><tbody><tr><th>Tempo de Preparo: </th><td>" + 
-                        receita.getTempo() + 
-                    "</td></tr></tbody>" +
-                    "</th></tr></thead><tbody><tr><th>Rendimento (Porções): </th><td>" + 
-                        receita.getPorcao() + 
-                    "</td></tr></tbody>" +
-                    "</th></tr></thead><tbody><tr><th>Categoria: </th><td>" + 
-                        receita.getCategoria() + 
-                    "</td></tr></tbody>" +
-                    "</th></tr></thead><tbody><tr><th>Ingredientes: </th><td>" + 
-                        receita.getIngredientes() + 
-                    "</td></tr></tbody>" +
-                    "</th></tr></thead><tbody><tr><th>Modo de Preparo: </th><td>" + 
-                        receita.getPreparo() + 
-                    "</td></tr></tbody></table>"
+                    "<table id=\"receita\" style= \"background-color: #F2C4B3;\" >" +
+                        "<thead>" +
+                            "<tr>" +
+                                "<th colspan=\'2\' style=\'text-align:left;\'>"+
+                                    "<a style=\'font-size: 22px;\'>" +
+                                        receita.getNome() +
+                                    "</a>" +
+                         
+                                "</th>"+
+                            "</tr>" +
+                        "</thead>" +
+                        
+                        "<tbody>" +
+                            "<tr colspan=\"3\" style=\"color: #787373; font-size: 14px; text-align:center\">" +
+                                "<td>Tempo de Preparo: " + 
+                                    receita.getTempo() + 
+                                "</td>" +
+
+                                "<td>Rendimento (Porções): " + 
+                                    receita.getPorcao() + 
+                                "</td>" +
+
+                                "<td>Categoria: " + 
+                                    receita.getCategoria() + 
+                                "</td>" +
+                            "</tr>" + 
+
+                            "<tbody>" +
+                                "<tr>" +
+                                    "<th>Ingredientes: </th>" +
+                                    "<td>" + 
+                                        receita.getIngredientes() + 
+                                    "</td>" +
+                                "</tr>" +
+                            "</tbody>" +
+
+                            "<tbody>" +
+                                "<tr>" +
+                                    "<th>Modo de Preparo: </th>" +
+                                    "<td>" + 
+                                        receita.getPreparo() + 
+                                    "</td>" +
+                                "</tr>" +
+                        "</tbody>" +
+                    "</table>"
                 );
                 
             } 		
