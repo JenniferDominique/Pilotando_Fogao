@@ -54,5 +54,5 @@ Então será fornecido um endereço localhost, copiando e colando esse endereço
 ## Etapas De Desenvolvimento (Vídeo)
 
 * [Protótipo](https://www.figma.com/proto/711D9fuMMBHXyLKfY4EZjh/Pilotando-Fog%C3%A3o?node-id=18%3A59&scaling=min-zoom)
-* Etapa 1: [Build do Sistema](https://youtu.be/LbPPuR-2KzU)
-* Etapa 2: [Sistema com Persistência de Dados](https://youtu.be/CiCmBCnfr8E)
+* Etapa 1: [Build do sistema](https://youtu.be/LbPPuR-2KzU)
+* Etapa 2: [Sistema com leitura do banco de dados MariaDB](https://youtu.be/JN71ckBc-nI)
