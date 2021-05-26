@@ -15,6 +15,9 @@ dependencies{
     // E o que sera buscado
     providedCompile 'javax.servlet:javax.servlet-api:3.1.0'
     // Usado durante a compilacao
+
+    implementation 'org.hibernate:hibernate-core:5.3.7.Final'
+    implementation 'org.mariadb.jdbc:mariadb-java-client:2.2.0'
 }
 
 repositories{
@@ -26,4 +29,5 @@ gretty{
     // Servidor - Servlet Container = Gretty
     // Configuracao do gretty para usar TomCat
     servletContainer = 'jetty9.3'
+    //servletContainer = 'tomcat8'
 }

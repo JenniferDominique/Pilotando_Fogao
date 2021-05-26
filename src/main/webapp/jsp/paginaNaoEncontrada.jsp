@@ -34,7 +34,6 @@
         <body>
 
             <div style="color: #F2ECEB; font-size: 1px; background-color: #A6212C;">-</div>
-        <!-- Gambi para poder ter a margem entre o cabecalho e o tópico de cadastro-->
 
         <table class="header" border="none" rules="none" frame="box" align="left" style="
                 width: 100%; 

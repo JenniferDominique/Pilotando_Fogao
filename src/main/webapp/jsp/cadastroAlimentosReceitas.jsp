@@ -1,5 +1,8 @@
-<%@page contentType="text/html" pageEncoding="UTF-8" %>
-    <!DOCTYPE html>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="java.util.List" %>
+<%@page import="model.Alimentos" %>
+    
+<!DOCTYPE html>
     <html>
 
     <head>
@@ -83,20 +86,20 @@
         <!--
         <form method="get" action="escrevernome.action">
         -->
-        <form  id="alimentos">
+        <form  id="alimentos" method="post" action="cadAlimento.action">
             <h1>Cadastro de Alimentos</h1>
 
             Alimento:
             <input name="alimento" /><br />
 
             Categoria:
-            <select name="categoria_alimento" id="categoria_alimento" form="carform">
-                <option value="fruta">Fruta</option>
-                <option value="legumes">Legume</option>
-                <option value="levedura">Levedura</option>
-                <option value="carne">Carne</option>
-                <option value="grao">Grão</option>
-                <option value="outro">Outro</option>
+            <select name="categoria_alimento">
+                <option value="Fruta">Fruta</option>
+                <option value="Legumes">Legume</option>
+                <option value="Levedura">Levedura</option>
+                <option value="Carne">Carne</option>
+                <option value="Grão">Grão</option>
+                <option value="Outro">Outro</option>
             </select><br />
 
             <input 
@@ -106,11 +109,12 @@
                     color: #FFF; 
                     background-color: #000; 
                     border-color: #000;"
+                value='Enviar'
             >
         </form>
 
 
-        <form id="receitas">
+        <form id="receitas" method="get" action="cadastro.receita">
             <h1>Cadastro de Receita</h1>
 
             Título:
@@ -133,11 +137,12 @@
 
             Ingrediente:
             <select name="ingrediente" id="ingrediente" form="receitas">
-                <option value="agua">Água</option>
-                <option >Açúcar</option>
-                <option >Maracujá</option>
-                <option >Gelo</option>
-                <option >Banana</option>
+                <%
+                    List<Alimentos> alimentos = (List<Alimentos>) request.getAttribute("alimentos");
+                    for(Alimentos alimento: alimentos){
+                        out.print("<option value='" + alimento.getNome() + "'>" + alimento.getNome() +"</option>");
+                    } 		
+                %>
             </select><br />
 
             <p style="font-size: 12px;">* Se o ingrediente desejado não estiver na lista, 
