@@ -108,7 +108,7 @@
             </thead>
         </table>
 
-
+        <!--
 
         <table id="receita" border="none" rules="none" frame="box" align="left" style="
                 width: 100%; 
@@ -175,13 +175,13 @@
                 </tr>
             </tbody>
         </table> 
-                 
+    -->         
 
         <%
             List<Receitas> receitas = (List<Receitas>) request.getAttribute("receitas");
             for(Receitas receita: receitas){
                 out.print(
-                    "<table id=\"receita\" style= \"background-color: #F2C4B3;\" >" +
+                    "<table id=\"receita\" style= \"background-color: #F2C4B3; width: 100%;\" >" +
                         "<thead>" +
                             "<tr>" +
                                 "<th colspan=\'2\' style=\'text-align:left;\'>"+
@@ -225,7 +225,7 @@
                                     "</td>" +
                                 "</tr>" +
                         "</tbody>" +
-                    "</table>"
+                    "</table></br>"
                 );
                 
             } 		

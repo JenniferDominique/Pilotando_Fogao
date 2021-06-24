@@ -83,10 +83,7 @@
             </table>
         </div>
 
-        <!--
-        <form method="get" action="escrevernome.action">
-        -->
-        <form  id="alimentos" method="post" action="cadAlimento.action">
+        <form  id="alimentos" method="post" action="cadastroAlimento">
             <h1>Cadastro de Alimentos</h1>
 
             Alimento:
@@ -99,7 +96,7 @@
                 <option value="Levedura">Levedura</option>
                 <option value="Carne">Carne</option>
                 <option value="Grão">Grão</option>
-                <option value="Outro">Outro</option>
+                <option value="Outros">Outros</option>
             </select><br />
 
             <input 
@@ -114,17 +111,17 @@
         </form>
 
 
-        <form id="receitas" method="get" action="cadastro.receita">
+        <form id="receitas" method="post" action="cadastroReceita">
             <h1>Cadastro de Receita</h1>
 
             Título:
             <input name="titulo_receita" /><br />
 
             Tempo de preparo (min.):
-            <input name="tempo" type="time" /><br />
+            <input name="tempo" /><br />
 
             Porções:
-            <input type="number" id="quantidade" name="quantidade" min="1" max="50"><br />
+            <input id="quantidade" name="quantidade" min="1" max="50"><br />
 
             Categoria:
             <select name="categoria_receita" id="categoria_receita" form="receitas">
@@ -145,11 +142,12 @@
                 %>
             </select><br />
 
-            <p style="font-size: 12px;">* Se o ingrediente desejado não estiver na lista, 
+            <p style="font-size: 12px; color: #8C0303;">* Se o ingrediente desejado não estiver na lista, 
                 então primeiro o adicione pelo cadastro de alimento
                  e logo ele aparecerá na lista.
             </p>
 
+        <!--
             Quantidade:
             <input name="quantidade" /><br />
 
@@ -165,9 +163,9 @@
                 <option value="litro" title="litro">L</option>
                 <option value="aGosto" title="aGosto">A gosto</option>
             </select><br />
-
+        -->
             <input 
-                type="submit" 
+                type="button" 
                 value="Adicionar Ingrediente" 
                 style="
                     font-family: 'Kelly Slab'; 
@@ -175,6 +173,7 @@
                     background-color:#8C0303; 
                     border-color: #8C0303;"
             ><br/>
+        
 
             <div>Modo de Preparo</div>
             <textarea 

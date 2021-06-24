@@ -59,9 +59,10 @@ public class FogaoServlet extends HttpServlet{
                 }catch (Exception e){}               
         } 
     }
-    /* 
-    public void doPost(HttpServletRequest req,HttpServletResponse res) 
-    throws ServletException, IOException{
+     
+    @Override
+    public void doPost(HttpServletRequest req,
+                       HttpServletResponse res){
             
         String path = req.getServletPath();
         // Ver qual caminho foi digitado
@@ -71,27 +72,33 @@ public class FogaoServlet extends HttpServlet{
                                
         switch (path){
 
-            case "/receita":
+            case "/cadastroAlimento":
                 try{
-		            List<Alimentos> ali = serv.listAlimentos();			
-		            req.setAttribute("aliment", ali);
-                }catch(Exception e){}
-            break;
-            
-            
-            case "/cadAlimento.action":
-                try{
-                    String nome = req.getParameter("alimento").toLowerCase();
+                    String nome = req.getParameter("alimento");
                     String categ = req.getParameter("categoria_alimento");
                     
                     serv.cadastrarAlimentos(nome, categ);
+                    sc.getRequestDispatcher("/jsp/cadastroAlimento.jsp").forward(req, res);
+                }catch (Exception e){}
+            break;
+
+            case "/cadastroReceita":
+                try{
+                    String nome = req.getParameter("titulo_receita");
+                    String tempo = req.getParameter("tempo");
+                    String porcao = req.getParameter("quantidade");
+                    String categoria = req.getParameter("categoria_receita");
+                    String ingrediente = req.getParameter("ingrediente");
+                    //String quantidade = req.getParameter("categoria_alimento");
+                    //String medida = req.getParameter("categoria_alimento");
+                    String preparo = req.getParameter("preparo");
                     
+                    serv.cadastrarReceitas(nome, tempo, porcao, categoria, ingrediente, preparo);
+                    sc.getRequestDispatcher("/jsp/cadastroReceita.jsp").forward(req, res);
                 }catch (Exception e){}
             break;
             
-        }
-                          
-            
-    } */ 
+        }      
+    } 
     
 }

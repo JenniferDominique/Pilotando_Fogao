@@ -13,8 +13,10 @@ import javax.persistence.Id;
 @Entity(name="alimentos")
 public class Alimentos { //persistence class
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  long id;           //persistence attribute
+    //IDENTITY ==> https://stackoverflow.com/questions/49813666/table-dbname-hibernate-sequence-doesnt-exist
+    //Antes estava AUTO mas estava dando erro, mas achei a solução no link acima
     
     @Column(name="nome")
     private  String nome;       //persistence attribute
