@@ -78,5 +78,20 @@ public class Service { //persistence class
         emf.close();
         return receitas;            
     }
-    	
+    
+    
+    /*Excluir alimento*/
+    public void excluirAlimentos(Long id){
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("persistencia_pilot");        
+        EntityManager em = emf.createEntityManager();
+                          
+        Alimentos ali;
+        ali = em.find(Alimentos.class, id);
+        em.getTransaction().begin();
+        em.remove(ali);
+        em.getTransaction().commit();
+        
+        em.close();
+        emf.close();
+    }
 }

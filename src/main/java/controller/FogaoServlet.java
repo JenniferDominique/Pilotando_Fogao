@@ -97,6 +97,16 @@ public class FogaoServlet extends HttpServlet{
                     sc.getRequestDispatcher("/jsp/cadastroReceita.jsp").forward(req, res);
                 }catch (Exception e){}
             break;
+
+            case "/excluirAlimento":
+                try{
+                    String idString = req.getParameter("exAlimento");
+                    long id = Long.valueOf(idString).longValue();
+                    
+                    serv.excluirAlimentos(id);
+                    sc.getRequestDispatcher("/jsp/excluirAlimento.jsp").forward(req, res);
+                }catch (Exception e){}
+            break;
             
         }      
     } 

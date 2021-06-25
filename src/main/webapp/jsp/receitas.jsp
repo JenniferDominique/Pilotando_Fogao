@@ -49,6 +49,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         $(document).ready(function () {
+            /*$("#excluir").click(function () {
+                //
+            });*/   
+        
             $("#show").click(function () {
                 $("#receita>tbody>tr:nth-child(even)").toggle();
                 // Show - Mostra a receita
@@ -58,8 +62,7 @@
                 $("#receita>tbody>tr:nth-child(even)").toggle();
                 // Toggle - Mostra a receita OU encolhe a receita
                 //$("tfoot").toggle();
-            });
-            
+            });   
         });
     </script>
 
@@ -108,7 +111,7 @@
             </thead>
         </table>
 
-        <!--
+    <!--  
 
         <table id="receita" border="none" rules="none" frame="box" align="left" style="
                 width: 100%; 
@@ -122,7 +125,7 @@
                         <a id="titulo" style="font-size: 22px;">
                             Smoothie de Maracujá
                         </a>
-
+                        
                     <td style="text-align:right;" rowspan="2">
                         <img id="show" alt="Ver Mais/ Ver Menos"
                             src="https://raw.githubusercontent.com/JenniferDominique/Pilotando_Fogao/master/src/main/webapp/img/Cozinhar.png"
@@ -175,7 +178,7 @@
                 </tr>
             </tbody>
         </table> 
-    -->         
+    --> 
 
         <%
             List<Receitas> receitas = (List<Receitas>) request.getAttribute("receitas");
@@ -237,7 +240,15 @@
         <%
             List<Alimentos> alimentos = (List<Alimentos>) request.getAttribute("alimentos");
             for(Alimentos alimento: alimentos){
-                out.print("<li>" + alimento.getNome() + "</li>");                
+                out.print(
+                    "<li value=${alimento.getId()}>" + 
+                        "<a style=\'margin-right:10px\' href=\'excluirAlimento.jsp?id=${alimento.getId()}\'>" +
+                            "<img src=\'https://raw.githubusercontent.com/JenniferDominique/Pilotando_Fogao/master/src/main/webapp/img/Lixeira.png\'" +
+                            "alt=\'Excluir Alimento\' width=\'16\' height=\'17\'/>" +
+                        "</a>" +
+                        alimento.getNome() + 
+                    "</li>"
+                );                
             } 		
         %>
 
