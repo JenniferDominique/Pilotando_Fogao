@@ -1,4 +1,6 @@
-# 🥘 Pilotando Fogão
+# 🥘 Pilotando Fogão - Manual para pilotos de fogão
+
+<img src="https://raw.githubusercontent.com/JenniferDominique/Pilotando_Fogao/master/src/main/webapp/img/PilotandoFogao.png" width="1000px" title="Banner - Pilotando Fogao - Manual para pilotos de fogão">
 
 Esse é um repositório referente ao curso de Laboratório de Engenharia de Software (LES), do 5º semestre do curso de ensino superior de Análise e Desenvolvimento de Sistemas da Faculdade de Tecnologia de São José dos Campos (FATEC - SJC), 1° Semestre 2021.
 
@@ -56,3 +58,4 @@ Então será fornecido um endereço localhost, copiando e colando esse endereço
 * [Protótipo](https://www.figma.com/proto/711D9fuMMBHXyLKfY4EZjh/Pilotando-Fog%C3%A3o?node-id=18%3A59&scaling=min-zoom)
 * Etapa 1: [Build do sistema](https://youtu.be/LbPPuR-2KzU)
 * Etapa 2: [Sistema com leitura do banco de dados MariaDB](https://youtu.be/JN71ckBc-nI)
+* Etapa 3: [Inserção de novos alimentos e receitas no banco de dados MariaDB](https://youtu.be/KO8uHuKnx5k)
